@@ -13,13 +13,16 @@ const SideBar = ({ isOpen, onClose }) => {
 
   return (
     <>
-      {isOpen && <div className="sidebar-overlay" onClick={onClose} />}
+      {isOpen && <div className="sidebar-overlay sidebar-open" onClick={onClose} />}
       <aside className={`sidebar ${isOpen ? 'sidebar-open' : ''}`}>
         <div className="sidebar-header">
-          <h3>Navigation</h3>
+          <h2 className="sidebar-title">Gold Billing</h2>
           <button className="sidebar-close" onClick={onClose}>
             ×
           </button>
+        </div>
+        <div className="sidebar-section">
+          <h3>Navigation</h3>
         </div>
         <nav className="sidebar-nav">
           <ul>
